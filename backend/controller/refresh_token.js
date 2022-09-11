@@ -17,8 +17,8 @@ route.post('/refresh',(req,res)=>{
             .then(result=>{
                 if(result)
                 {
-                   const  access_tok= gen_access_token(user._id)
-                   const refresh_tok=gen_refresh_token(user._id)
+                   const  access_tok= gen_access_token(user.id)
+                   const refresh_tok=gen_refresh_token(user.id)
                    const tokens={
                             access_token:access_tok,
                             refresh_token:refresh_tok

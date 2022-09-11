@@ -7,12 +7,13 @@ route.post('/dashboard',verify,(req,res)=>{
         {
             user.findOne({_id:req.user.id})
             .then(result=>{
+                console.log(req.user)
                 if(result)
                 {
                     res.send(result)
                 }
                 else{
-                    return res.status(403).json('your not authenticated')
+                    return res.status(403).json('your not authenticated das')
                 }
                 
             })
